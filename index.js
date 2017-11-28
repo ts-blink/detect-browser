@@ -67,11 +67,7 @@ function detectOS(userAgentString) {
 
 function getNodeVersion() {
   var isNode = typeof navigator === 'undefined' && typeof process !== 'undefined';
-  return isNode ? {
-    name: 'node',
-    version: process.version.slice(1),
-    os: require('os').type().toLowerCase()
-  } : null;
+  return null;
 }
 
 function parseUserAgent(userAgentString) {
